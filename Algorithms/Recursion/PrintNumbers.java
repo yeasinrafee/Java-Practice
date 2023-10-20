@@ -7,7 +7,14 @@ public class PrintNumbers{
         System.out.println(n);
         printNumbers(n - 1);
     }
+
+    public static void printNumbersRegular(int n){
+        if(n == 6)
+            return;
+        System.out.println(n);
+        printNumbersRegular(n+1);
+    }
     public static void main(String[] args){
-        printNumbers(5);
+        printNumbersRegular(1);
     }
 }
