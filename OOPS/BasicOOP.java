@@ -14,9 +14,17 @@ class Student{
     String name;
     int age;
 
-    Student(String name, int age){
-        this.name = name;
-        this.age = age;
+    // Parameterized constructor
+    // Student(String name, int age){
+    //     this.name = name;
+    //     this.age = age;
+    // }
+
+    // Copy constructor
+    Student(){};
+    Student(Student s){
+        this.name = s.name;
+        this.age = s.age;
     }
 
     public void printInfo(){
@@ -27,7 +35,11 @@ class Student{
 
 public class BasicOOP{
     public static void main(String[] args){
-        Student s1 = new Student("Rafee", 23);
-        s1.printInfo();
+        Student s1 = new Student();
+        s1.name = "Rafee";
+        s1.age = 22;
+
+        Student s2 = new Student(s1);
+        s2.printInfo();
     }
 }
